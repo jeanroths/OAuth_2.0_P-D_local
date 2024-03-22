@@ -5,10 +5,9 @@ import (
 	  "os"
 	  "github.com/gin-gonic/gin"
 	  "github.com/joho/godotenv"
-	  congnitoClient "cognitoClient"
+	  congnitoClient "github.com/jeanroths/OAuth_2.0_P-D_local/cognitoClient"
 	  "errors"
 	  "net/http"
-	  "json"
 )
 
 func CreateUser(c *gin.Context, cognito congnitoClient.CognitoInterface) error {

@@ -5,6 +5,7 @@ import (
   "github.com/aws/aws-sdk-go/aws/session"
   cognito "github.com/aws/aws-sdk-go/service/cognitoidentityprovider"
   "github.com/google/uuid"
+  "os"
 )
 
 type User struct {
@@ -48,10 +49,6 @@ func NewCognitoClient(appClientId string) CognitoInterface {
 	cognitoClient: client,
 	appClientID:   appClientId,
   }
-}
-
-func (c *cognitoClient) SignUp(user *User) error {
-  return nil
 }
 
 func (c *cognitoClient) SignUp(user *User) error {
